@@ -1,0 +1,3 @@
+name: helloplugin
+main: com.davidhurng.helloplugin.hello
+version: 1.0
