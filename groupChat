@@ -1,16 +1,20 @@
-import java.util.logging.Logger;
+package com.davidhurng.helloplugin;
  
+import java.util.logging.Logger;
+
+import org.bukkit.plugin.java.JavaPlugin;
+
 import org.apache.commons.lang.StringUtils;
 import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.PluginDescriptionFile;
-import org.bukkit.plugin.java.JavaPlugin;
+
  
-public final class groupChat extends JavaPlugin {
+public final class hello extends JavaPlugin {
     public final Logger logger = Logger.getLogger("Minecraft");
-    public static groupChat plugin;
+    public static hello plugin;
  
     @Override
         public void onEnable(){
@@ -27,7 +31,7 @@ public final class groupChat extends JavaPlugin {
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args){
         Player s = (Player)sender;
  
-        if((commandLabel.equalsIgnoreCase("im"))){ //  Instant messaging system
+        if((commandLabel.equalsIgnoreCase("im"))){ //  Instant messaging system activate
             if(args.length == 0){
                 s.sendMessage(ChatColor.DARK_RED + "Incorrect Usage! Correct Usage: /im (player) (message)");
             }
@@ -36,8 +40,8 @@ public final class groupChat extends JavaPlugin {
             }
             else if(args.length > 1){ // Anything after the players name will be sent to the target
                 Player target = s.getServer().getPlayer(args[0]); // Get target players name
-                s.sendMessage(ChatColor.GREEN + "Message Sent!");
-                target.sendMessage(ChatColor.BLUE + "Received message from " + sender.getName() + ":");
+                s.sendMessage(ChatColor.GREEN + "Message Sent");
+                target.sendMessage(ChatColor.BLUE + "Received private message from " + sender.getName() + ":");
                 target.sendMessage(ChatColor.GREEN + StringUtils.join(args, ' ', 1, args.length)); // Send message to target player
             }
         }
