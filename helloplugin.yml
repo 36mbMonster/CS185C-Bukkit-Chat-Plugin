@@ -1,3 +1,13 @@
 name: helloplugin
 main: com.davidhurng.helloplugin.hello
 version: 1.0
+
+commands:
+  hello:
+    description: welcome
+  
+  imstart:
+    description: start it  
+  
+  imend:
+    description: end it
