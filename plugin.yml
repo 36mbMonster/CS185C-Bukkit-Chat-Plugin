@@ -1,0 +1,13 @@
+name: groupChat
+main: com.davidhurng.helloplugin.groupChat
+version: 1.0
+
+commands:
+  alt:
+    description: alternative text
+  
+  imstart:
+    description: start it  
+  
+  imend:
+    description: end it
