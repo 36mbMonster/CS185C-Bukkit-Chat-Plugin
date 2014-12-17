@@ -6,8 +6,14 @@ commands:
   alt:
     description: alternative text
   
-  imstart:
-    description: start it  
+  mkch:
+    description: create channel  
   
-  imend:
-    description: end it
+  join:
+    description: join channel
+
+  m:
+    description: message channel
+
+  block:
+    description: block player
